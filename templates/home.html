@@ -1,12 +1,51 @@
 <html>
+    <style>
+        body {
+            background-color: #5151521a;
+            font-family: Verdana;
+            text-align: center;
+        }
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: block;
+            margin-bottom: 10px;
+        }
+         /* Styling form-control input, 
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+    </style>
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
+       <!-- <h1>Student Exam Performance Indicator</h1> -->
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
             <legend>Student Exam Performance Prediction</legend>
         </h1>
+        <div>
         <div class="mb-3">
             <label class="form-label">Gender</label>
             <select class="form-control" name="gender" placeholder="Enter you Gender" required>
@@ -105,7 +144,8 @@
         </div>
     </form>
     <h2>
-       THE  prediction is {{results}}
+       The  Prediction is {{results}}
     </h2>
+</div>
    <body>
 </html>
